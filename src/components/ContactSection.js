@@ -12,7 +12,12 @@ function ContactSection() {
           as soon as possible or whenever available.
         </p>
 
-        <form>
+        <form
+          name="contact form"
+          method="post"
+          data-netlify="true"
+          onSubmit="submit"
+        >
           <div class="form-group">
             <label for="firstName">First Name</label>
             <input
@@ -60,9 +65,9 @@ function ContactSection() {
               class="form-element"
             ></textarea>
           </div>
-          <div class="submit-group">
+          <Submit>
             <input type="submit" value="SEND" />
-          </div>
+          </Submit>
         </form>
       </div>
     </Contact>
@@ -156,36 +161,31 @@ const Contact = styled.div`
           min-height: 100px;
         }
       }
+    }
+  }
+`;
 
-      .submit-group {
-        grid-column: 1 / -1;
-        text-align: center;
+const Submit = styled.div`
+  grid-column: 1 / -1;
+  text-align: center;
 
-        input[type="submit"] {
-          /* appearance: none;
-          border: none;
-          outline: none;
-          background: none; */
+  input[type="submit"] {
+    color: var(--mainColor);
+    background: var(--bgColor);
+    font-size: 1rem;
+    font-weight: 600;
+    width: 14rem;
+    padding: 0.7rem;
+    margin-top: 2.5rem;
+    border: 0.5px solid var(--mainColor);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.4s;
 
-          color: var(--mainColor);
-          background: var(--bgColor);
-          font-size: 1rem;
-          font-weight: 600;
-          width: 14rem;
-          padding: 0.7rem;
-          margin-top: 2.5rem;
-          border: 0.5px solid var(--mainColor);
-          border-radius: 0.5rem;
-          cursor: pointer;
-          transition: 0.4s;
-
-          &:hover {
-            color: var(--secondColor);
-            background: var(--mainColor);
-            border: 0.5px solid var(--secondColor);
-          }
-        }
-      }
+    &:hover {
+      color: var(--secondColor);
+      background: var(--mainColor);
+      border: 0.5px solid var(--secondColor);
     }
   }
 `;
