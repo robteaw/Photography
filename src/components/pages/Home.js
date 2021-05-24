@@ -3,7 +3,7 @@ import HeroSection from "../HeroSection";
 import ServiceSection from "../ServiceSection";
 import BookSection from "../BookSection";
 
-function Home() {
+export default function Home() {
   return (
     <>
       <HeroSection />
@@ -12,5 +12,3 @@ function Home() {
     </>
   );
 }
-
-export default Home;

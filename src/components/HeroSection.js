@@ -1,9 +1,9 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import styled from "styled-components";
-import heroImg from "../img/heroImg.jpg";
+import heroImg from "../images/heroImg.jpg";
 
-function HeroSection() {
+export default function HeroSection() {
   return (
     <Hero style={{ backgroundImage: `url(${heroImg})` }}>
       <div class="container">
@@ -23,6 +23,7 @@ function HeroSection() {
   );
 }
 
+// Styling
 const Hero = styled.div`
   min-height: 70vh;
   display: flex;
@@ -33,31 +34,10 @@ const Hero = styled.div`
 
   h1 {
     color: var(--mainColor);
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
       1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
       1px 1px 5px #000;
     text-transform: uppercase;
   }
-
-  button {
-    color: var(--mainColor);
-    background: var(--bgColor);
-    font-size: 1rem;
-    font-weight: 600;
-    width: 14rem;
-    padding: 0.7rem;
-    margin-top: 2.5rem;
-    border: 0.5px solid var(--mainColor);
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: 0.4s;
-  }
-
-  button:hover {
-    color: var(--secondColor);
-    background: var(--mainColor);
-  }
 `;
-
-export default HeroSection;

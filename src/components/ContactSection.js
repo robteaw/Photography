@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-// import { TextField } from "@material-ui/core";
 
-function ContactSection() {
+export default function ContactSection() {
   return (
     <Contact>
       <div class="container">
@@ -13,7 +12,7 @@ function ContactSection() {
         </p>
 
         <form
-          name="contact form"
+          name="contact v1"
           method="post"
           data-netlify="true"
           onSubmit="submit"
@@ -74,10 +73,10 @@ function ContactSection() {
   );
 }
 
-export default ContactSection;
-
+// Styling
 const Contact = styled.div`
   height: 100vh;
+  /* background: var(--bgColor); */
 
   .container {
     max-width: 1280px;
@@ -96,7 +95,7 @@ const Contact = styled.div`
     }
 
     h1 {
-      /* color: #666; */
+      /* color: var(--hoverColor); */
       font-size: 36px;
       text-transform: uppercase;
       text-align: center;

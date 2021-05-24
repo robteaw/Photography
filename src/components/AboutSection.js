@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import person from "../img/home.png";
+import person from "../images/home.png";
 
 function AboutSection() {
   return (
@@ -34,13 +34,13 @@ const About = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
-  padding-top: 7.5rem;
+  min-height: 100vh;
   padding-bottom: 7.5rem;
+  overflow: hidden;
 
   @media (max-width: 991px) {
     padding: 0 3%;
-    padding-top: 7.5rem;
+    /* padding-top: 7.5rem; */
     padding-bottom: 2rem;
   }
   html {
@@ -49,19 +49,10 @@ const About = styled.div`
 
   @media (max-width: 768px) {
     flex-flow: column-reverse;
-    /* }
-  h1 {
-    font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 1.3rem;
-  }
-  p {
-    font-size: 0.5rem; */
-  }
 
-  Image img {
-    width: 100%;
+    .box .circle img {
+      width: 20rem;
+    }
   }
 `;
 

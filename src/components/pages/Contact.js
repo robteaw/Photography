@@ -1,12 +1,10 @@
 import React from "react";
 import ContactSection from "../ContactSection";
 
-function Contact() {
+export default function Contact() {
   return (
     <>
       <ContactSection />
     </>
   );
 }
-
-export default Contact;

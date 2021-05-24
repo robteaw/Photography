@@ -1,36 +1,27 @@
 import React from "react";
 import styled from "styled-components";
-import camera from "../img/camera.png";
-import photoEdit from "../img/photo-edit.jpg";
+import camera from "../images/camera.jpg";
+import photoEdit from "../images/photo-edit.jpg";
 
 function ServiceSection() {
   return (
     <Service>
-      <h1>Find A Service</h1>
       <Container>
-        <Box>
-          <div>
-            <img src={camera} alt="camera" />
-          </div>
-          <div>
-            <h3>Photography</h3>
-            <p>High quality photos</p>
-            <p>Fast delivery</p>
-            <p>For various occasions</p>
-          </div>
-        </Box>
+        <div className="card">
+          <img src={camera} alt="camera" />
+          <h3>Photography</h3>
+          <p>High quality photos</p>
+          <p>Fast delivery</p>
+          <p>For various occasions</p>
+        </div>
 
-        <Box>
-          <div>
-            <img src={photoEdit} alt="camera" />
-          </div>
-          <div>
-            <h3>Photo Editing</h3>
-            <p>Color adjustments</p>
-            <p>Skin smoothing</p>
-            <p>Cropping and Resizing</p>
-          </div>
-        </Box>
+        <div className="card">
+          <img src={photoEdit} alt="camera" />
+          <h3>Photo Editing</h3>
+          <p>Color adjustments</p>
+          <p>Skin smoothing</p>
+          <p>Cropping and Resizing</p>
+        </div>
       </Container>
     </Service>
   );
@@ -39,68 +30,52 @@ function ServiceSection() {
 export default ServiceSection;
 
 const Service = styled.div`
-  height: 85vh;
-
-  h1 {
-    text-align: center;
-    padding: 5rem 0 3rem 0;
-  }
-
-  button {
-    color: var(--mainColor);
-    background: var(--secondColor);
-    font-weight: 600;
-    left: 50%;
-    position: relative;
-    padding: 0.8rem;
-    border-radius: 0.25rem;
-    cursor: pointer;
-  }
-
-  button:hover {
-    color: var(--secondColor);
-    background: var(--mainColor);
-  }
+  height: 80vh;
 `;
 
 const Container = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 10em;
+
+  .card {
+    width: 23rem;
+    height: 30rem;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+    margin-inline: 3rem;
+  }
+
+  .card:hover {
+    margin-top: -10px;
+  }
 
   img {
-    display: block;
-    height: 12rem;
-    margin-right: 5rem;
+    height: 15rem;
+    width: 23rem;
   }
-`;
-
-const Box = styled.div`
-  background: var(--mainColor);
-  border-radius: 0.5rem;
-  margin: 1.5rem 7rem 0 7rem;
-  padding-top: 1rem;
-  flex-wrap: wrap;
-  border-radius: 0.5rem;
-  text-align: center;
-  transition: 0.2s linear;
-  display: flex;
 
   h3 {
     font-size: 1.5rem;
     padding-top: 1rem;
-    text-align: justify;
+    text-align: center;
     padding-bottom: 1.5rem;
   }
 
   p {
     color: #888;
+    font-size: 1rem;
     line-height: 3rem;
-    text-align: justify;
+    text-align: center;
   }
 
   @media (max-width: 944px) {
-    margin: 0 auto;
+    .card {
+      margin-bottom: 2rem;
+    }
   }
 `;

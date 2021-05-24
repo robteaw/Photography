@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { IconContext } from "react-icons";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "../img/logo2.png";
+import logo from "../images/logo2.png";
 import "./Navbar.css";
 
-function Navbar() {
+export default function Navbar() {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -62,5 +62,3 @@ function Navbar() {
     </>
   );
 }
-
-export default Navbar;
