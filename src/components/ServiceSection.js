@@ -3,7 +3,7 @@ import styled from "styled-components";
 import camera from "../images/camera.jpg";
 import photoEdit from "../images/photo-edit.jpg";
 
-function ServiceSection() {
+export default function ServiceSection() {
   return (
     <Service>
       <Container>
@@ -27,8 +27,7 @@ function ServiceSection() {
   );
 }
 
-export default ServiceSection;
-
+// Styling
 const Service = styled.div`
   height: 80vh;
 `;
@@ -39,7 +38,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 10em;
+  padding-top: 10em;
 
   .card {
     width: 23rem;
@@ -60,6 +59,7 @@ const Container = styled.div`
   }
 
   h3 {
+    color: var(--mainColor);
     font-size: 1.5rem;
     padding-top: 1rem;
     text-align: center;
@@ -67,7 +67,6 @@ const Container = styled.div`
   }
 
   p {
-    color: #888;
     font-size: 1rem;
     line-height: 3rem;
     text-align: center;

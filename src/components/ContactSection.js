@@ -76,7 +76,6 @@ export default function ContactSection() {
 // Styling
 const Contact = styled.div`
   height: 100vh;
-  /* background: var(--bgColor); */
 
   .container {
     max-width: 1280px;
@@ -95,7 +94,6 @@ const Contact = styled.div`
     }
 
     h1 {
-      /* color: var(--hoverColor); */
       font-size: 36px;
       text-transform: uppercase;
       text-align: center;
@@ -104,7 +102,6 @@ const Contact = styled.div`
     }
 
     p {
-      color: #888;
       font-size: 1.125rem;
       text-align: center;
       line-height: 1.5;
@@ -115,10 +112,10 @@ const Contact = styled.div`
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 16px;
-      background-color: #fff;
       padding: 32px;
       border-radius: 16px;
-      /* box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); */
+      box-shadow: 0 7px 30px 0 rgba(150, 170, 180, 0.5);
+      background: var(--bgColor);
 
       @media (min-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
@@ -132,7 +129,7 @@ const Contact = styled.div`
         label {
           display: block;
           margin-bottom: 5px;
-          color: #888;
+          color: var(--mainColor);
           font-size: 1rem;
         }
 
@@ -151,7 +148,7 @@ const Contact = styled.div`
 
           &:focus {
             box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
-            background-color: #fff;
+            background-color: var(--mainColor);
           }
         }
 

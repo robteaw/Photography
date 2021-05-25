@@ -77,7 +77,6 @@ const Text = styled.div`
 
   p {
     font-size: 1rem;
-    color: #888;
     line-height: 2rem;
     margin: 20px 0;
   }
@@ -92,7 +91,7 @@ const Image = styled.div`
     position: relative;
     width: 22.5rem;
     height: 24rem;
-    background: #fff;
+    background: var(--bgColor);
     margin: 20px 40px;
     overflow: hidden;
   }
@@ -127,7 +126,7 @@ const Image = styled.div`
     border-radius: 50%;
     background: transparent;
     z-index: 1;
-    box-shadow: 0 7.5rem 0 22.5rem #fff;
+    box-shadow: 0 7.5rem 0 22.5rem var(--bgColor);
   }
 
   .box::after {

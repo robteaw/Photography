@@ -10,11 +10,17 @@
 :root {
   --mainColor: #fff;
   --secondColor: #1c2237;
+  --thirdColor: #c0c0c0;
   --hoverColor: #77a7bd;
   --bgColor: #1c2237;
 }
 
+body {
+  background: var(--bgColor);
+}
+
 h1 {
+  color: var(--mainColor);
   font-size: 2.5rem;
   -webkit-background-clip: text;
   font-size: 2.5rem;
@@ -23,7 +29,7 @@ h1 {
 
 p {
   font-size: 1.125rem;
-  color: #888;
+  color: var(--thirdColor);
 }
 
 /* Button  */

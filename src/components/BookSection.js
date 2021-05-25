@@ -21,7 +21,6 @@ export default function BookSection() {
 const Book = styled.div`
   color: #fff;
   height: 30vh;
-  background: #1c2237;
   display: flex;
   flex-direction: column;
   padding: 5rem;
