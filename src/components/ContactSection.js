@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 // Styling and Animation
-import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { motion } from "framer-motion";
 import { popup } from "../animations";
 
 export default function ContactSection() {
