@@ -1,24 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import person from "../images/home.png";
 // Styling and Animation
-import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
-import { fadeIn } from "../animations";
+import { motion } from "framer-motion";
+import { container, titleAnim, fadeIn } from "../animations";
 
 function AboutSection() {
   return (
     <About>
       <Text>
-        <h1>Ren Tea</h1>
-        <h2>Freelance Photographer</h2>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit
-          quisquam rerum beatae cum commodi consequuntur totam, voluptates,
-          possimus, aspernatur laborum sapiente consectetur perferendis quia.
-          Libero minima quasi assumenda non ea.
-        </p>
-        <Link to="/portfolio">{/* <button>View Images</button> */}</Link>
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="title"
+        >
+          <motion.h1 variants={titleAnim}>Ren Tea</motion.h1>
+          <motion.h2 variants={titleAnim}>Freelance Photographer</motion.h2>
+          <motion.p variants={titleAnim}>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit
+            quisquam rerum beatae cum commodi consequuntur totam, voluptates,
+            possimus, aspernatur laborum sapiente consectetur perferendis quia.
+            Libero minima quasi assumenda non ea.
+          </motion.p>
+        </motion.div>
       </Text>
 
       <Image variants={fadeIn} initial="hidden" animate="show">

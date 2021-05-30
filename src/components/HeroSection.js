@@ -3,30 +3,28 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import heroImg from "../images/heroImg.jpg";
 // Styling and Animation
-import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
-import { titleAnim } from "../animations";
+import { motion } from "framer-motion";
+import { container, titleAnim } from "../animations";
 
 export default function HeroSection() {
-  const titleAnim = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 2 } },
-  };
-
   return (
     <Hero style={{ backgroundImage: `url(${heroImg})` }}>
-      <div class="container">
+      <div className="container">
         <div class="split">
-          <div>
+          <motion.div
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className="title"
+          >
             <motion.h1 variants={titleAnim}>Pause for a moment</motion.h1>
             <motion.h1 variants={titleAnim}>and capture</motion.h1>
             <motion.h1 variants={titleAnim}>the memories</motion.h1>
             {/* <Link to="/">
               <button>Learn More</button>
             </Link> */}
-          </div>
-          <div>
-            {/* <img src="img/image-02.jpg" alt="foggy mountains with sun setting behind them"> */}
-          </div>
+          </motion.div>
+          <div></div>
         </div>
       </div>
     </Hero>

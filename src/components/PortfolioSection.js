@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { SRLWrapper } from "simple-react-lightbox";
+// Styling and Animation
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animations";
 
 const images = [
   { id: "1", imageName: "image1.jpg", tag: "landscape" },
@@ -23,7 +26,12 @@ export default function PortfolioSection() {
   }, [tag]);
 
   return (
-    <Portfolio>
+    <Portfolio
+      exit="exit"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
       <div handleSetTag={setTag}>
         <div className="tags">
           <TagButton
@@ -74,7 +82,7 @@ const TagButton = ({ name, handleSetTag, tagActive }) => {
 };
 
 // Styling
-const Portfolio = styled.div`
+const Portfolio = styled(motion.div)`
   height: 100vh;
   padding-top: 4rem;
 

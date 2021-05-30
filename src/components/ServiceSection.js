@@ -4,7 +4,7 @@ import camera from "../images/camera.jpg";
 import photoEdit from "../images/photo-edit.jpg";
 import { Link } from "react-router-dom";
 // Styling and Animation
-import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeIn } from "../animations";
 
 export default function ServiceSection() {

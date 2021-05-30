@@ -6,7 +6,7 @@ import { popup } from "../animations";
 
 export default function ContactSection() {
   return (
-    <Contact variants={popup} initial="hidden" animate="show">
+    <Contact>
       <div class="container">
         <h1>Contact</h1>
         <p>
@@ -14,7 +14,10 @@ export default function ContactSection() {
           as soon as possible or whenever available.
         </p>
 
-        <form
+        <Form
+          variants={popup}
+          initial="hidden"
+          animate="show"
           name="contact v1"
           method="post"
           data-netlify="true"
@@ -70,7 +73,7 @@ export default function ContactSection() {
           <Submit>
             <input type="submit" value="SEND" />
           </Submit>
-        </form>
+        </Form>
       </div>
     </Contact>
   );
@@ -110,8 +113,10 @@ const Contact = styled(motion.div)`
       line-height: 1.5;
       margin-bottom: 32px;
     }
+  }
+`;
 
-    form {
+const Form = styled(motion.div)` 
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 16px;
