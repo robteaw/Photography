@@ -38,6 +38,7 @@ function AboutSection() {
   );
 }
 
+// Styling
 const About = styled(motion.div)`
   display: flex;
   align-items: center;
