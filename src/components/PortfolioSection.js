@@ -16,7 +16,7 @@ const images = [
 ];
 
 export default function PortfolioSection() {
-  const [tag, setTag] = useState("people");
+  const [tag, setTag] = useState("all");
   const [filteredImages, setFilteredImages] = useState([]);
 
   useEffect(() => {

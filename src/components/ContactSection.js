@@ -15,12 +15,16 @@ export default function ContactSection() {
         </p>
 
         <Form
+          netlify
           variants={popup}
           initial="hidden"
           animate="show"
-          name="contact v1"
+          name="contact"
+          action="/contact"
           method="post"
           data-netlify="true"
+          netlify-honeypot="bot-field"
+          hidden
           onSubmit="submit"
         >
           <div class="form-group">
