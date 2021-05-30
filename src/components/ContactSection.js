@@ -13,71 +13,74 @@ export default function ContactSection() {
           Fill out the form below to get in touch. I will try to get back to you
           as soon as possible or whenever available.
         </p>
+        <Main variants={popup} initial="hidden" animate="show">
+          <form
+            name="contact"
+            action="/contact"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            hidden
+            onSubmit="submit"
+          >
+            <input type="hidden" name="form-name" value="contact" />
 
-        <Form
-          netlify
-          variants={popup}
-          initial="hidden"
-          animate="show"
-          name="contact"
-          action="/contact"
-          method="post"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          hidden
-          onSubmit="submit"
-        >
-          <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input
-              type="text"
-              name="firstName"
-              id="firstName"
-              required
-              class="form-element"
-            />
-          </div>
-          <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input
-              type="text"
-              name="lastName"
-              id="lastName"
-              required
-              class="form-element"
-            />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              required
-              class="form-element"
-            />
-          </div>
-          <div class="form-group">
-            <label for="phoneNumber">Phone Number</label>
-            <input
-              type="text"
-              name="phoneNumber"
-              id="phoneNumber"
-              class="form-element"
-            />
-          </div>
-          <div class="form-group full">
-            <label for="message">Message</label>
-            <textarea
-              name="message"
-              id="message"
-              class="form-element"
-            ></textarea>
-          </div>
-          <Submit>
-            <input type="submit" value="SEND" />
-          </Submit>
-        </Form>
+            <div hidden>
+              <input name="bot-field" />
+            </div>
+
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                required
+                class="form-element"
+              />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                required
+                class="form-element"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                class="form-element"
+              />
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number</label>
+              <input
+                type="text"
+                name="phoneNumber"
+                id="phoneNumber"
+                class="form-element"
+              />
+            </div>
+            <div class="form-group full">
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                class="form-element"
+              ></textarea>
+            </div>
+            <Submit>
+              <input type="submit" value="SEND" />
+            </Submit>
+          </form>{" "}
+        </Main>
       </div>
     </Contact>
   );
@@ -120,60 +123,60 @@ const Contact = styled(motion.div)`
   }
 `;
 
-const Form = styled(motion.div)` 
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-gap: 16px;
-      padding: 32px;
-      border-radius: 16px;
-      box-shadow: 0 7px 30px 0 rgba(150, 170, 180, 0.5);
-      background: var(--bgColor);
+const Main = styled(motion.div)`
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 7px 30px 0 rgba(150, 170, 180, 0.5);
+    background: var(--bgColor);
 
-      @media (min-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-group {
+      &.full {
+        grid-column: 1 / -1;
       }
 
-      .form-group {
-        &.full {
-          grid-column: 1 / -1;
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--mainColor);
+        font-size: 1rem;
+      }
+
+      .form-element {
+        appearance: none;
+        outline: none;
+        border: none;
+
+        display: block;
+        width: 100%;
+
+        border-radius: 8px;
+        padding: 12px 16px;
+        background-color: #f3f3f3;
+        transition: 0.4s;
+
+        &:focus {
+          box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+          background-color: var(--mainColor);
         }
+      }
 
-        label {
-          display: block;
-          margin-bottom: 5px;
-          color: var(--mainColor);
-          font-size: 1rem;
-        }
-
-        .form-element {
-          appearance: none;
-          outline: none;
-          border: none;
-
-          display: block;
-          width: 100%;
-
-          border-radius: 8px;
-          padding: 12px 16px;
-          background-color: #f3f3f3;
-          transition: 0.4s;
-
-          &:focus {
-            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
-            background-color: var(--mainColor);
-          }
-        }
-
-        textarea {
-          resize: none;
-          min-height: 100px;
-        }
+      textarea {
+        resize: none;
+        min-height: 100px;
       }
     }
   }
 `;
 
-const Submit = styled.div`
+const Submit = styled(motion.div)`
   grid-column: 1 / -1;
   text-align: center;
 
