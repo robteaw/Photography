@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import person from "../images/home.png";
+// Styling and Animation
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { fadeIn } from "../animations";
 
 function AboutSection() {
   return (
@@ -18,7 +21,7 @@ function AboutSection() {
         <Link to="/portfolio">{/* <button>View Images</button> */}</Link>
       </Text>
 
-      <Image>
+      <Image variants={fadeIn} initial="hidden" animate="show">
         <div className="box">
           <div className="circle">
             {/* <img src={person} alt="person" /> */}
@@ -30,7 +33,7 @@ function AboutSection() {
   );
 }
 
-const About = styled.div`
+const About = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,23 +43,12 @@ const About = styled.div`
 
   @media (max-width: 991px) {
     padding: 0 3%;
-    /* padding-top: 7.5rem; */
     padding-bottom: 2rem;
-  }
-  html {
-    font-size: 80%;
-  }
-
-  @media (max-width: 768px) {
     flex-flow: column-reverse;
-
-    .box .circle img {
-      width: 20rem;
-    }
   }
 `;
 
-const Text = styled.div`
+const Text = styled(motion.div)`
   flex-basis: 30%;
   position: relative;
   padding: 2rem;
@@ -82,7 +74,7 @@ const Text = styled.div`
   }
 `;
 
-const Image = styled.div`
+const Image = styled(motion.div)`
   position: relative;
   display: flex;
   }
@@ -139,7 +131,7 @@ const Image = styled.div`
     box-sizing: border-box;
     border-radius: 50%;
     border: 6px solid transparent;
-    border-bottom: 6px solid #1c2237;
+    border-bottom: 6px solid var(--secondColor);
   }
 `;
 

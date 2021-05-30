@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+// Styling and Animation
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { popup } from "../animations";
 
 export default function ContactSection() {
   return (
-    <Contact>
+    <Contact variants={popup} initial="hidden" animate="show">
       <div class="container">
         <h1>Contact</h1>
         <p>
@@ -74,7 +77,7 @@ export default function ContactSection() {
 }
 
 // Styling
-const Contact = styled.div`
+const Contact = styled(motion.div)`
   height: 100vh;
 
   .container {

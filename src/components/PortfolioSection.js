@@ -83,15 +83,16 @@ const Portfolio = styled.div`
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 2rem;
     padding-bottom: 10rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .image-card {
     padding: 3px;
     border: 10px solid #ccc;
     box-shadow: 2px 2px 2px #999;
-    margin: 5px;
   }
 
   img {
@@ -122,5 +123,12 @@ const Portfolio = styled.div`
     font-weight: bold;
     color: var(--mainColor);
     border: 1px solid var(--mainColor);
+  }
+
+  @media (max-width: 1270px) {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 `;
