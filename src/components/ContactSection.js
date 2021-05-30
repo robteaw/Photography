@@ -15,15 +15,14 @@ export default function ContactSection() {
         </p>
         <Main variants={popup} initial="hidden" animate="show">
           <form
-            name="contact"
-            action="/contact"
-            method="post"
+            name="contact-form"
+            action="/"
+            method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            hidden
             onSubmit="submit"
           >
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="contact-form" />
 
             <div hidden>
               <input name="bot-field" />
