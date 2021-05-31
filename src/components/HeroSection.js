@@ -38,6 +38,7 @@ const Hero = styled(motion.div)`
   align-items: center;
   justify-content: center;
   background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 
   h1 {
