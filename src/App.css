@@ -15,6 +15,10 @@
   --bgColor: #1c2237;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bgColor);
 }

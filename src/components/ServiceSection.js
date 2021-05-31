@@ -9,7 +9,7 @@ import { fadeIn } from "../animations";
 
 export default function ServiceSection() {
   return (
-    <Service variants={fadeIn} initial="hidden" animate="show">
+    <Service variants={fadeIn} initial="hidden" animate="show" id="services">
       <Container>
         <Card>
           <img src={camera} alt="camera" />

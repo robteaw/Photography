@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import styled from "styled-components";
 import heroImg from "../images/heroImg.jpg";
 // Styling and Animation
@@ -20,9 +19,9 @@ export default function HeroSection() {
             <motion.h1 variants={titleAnim}>Pause for a moment</motion.h1>
             <motion.h1 variants={titleAnim}>and capture</motion.h1>
             <motion.h1 variants={titleAnim}>the memories</motion.h1>
-            {/* <Link to="/">
+            <a href="#services">
               <button>Learn More</button>
-            </Link> */}
+            </a>
           </motion.div>
           <div></div>
         </div>

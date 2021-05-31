@@ -14,7 +14,12 @@ export default function ContactSection() {
           as soon as possible or whenever available.
         </p>
         <Main variants={popup} initial="hidden" animate="show">
-          <form name="contact" action="/" method="POST" onSubmit="submit">
+          <form
+            name="contact"
+            action="/contact"
+            method="POST"
+            onSubmit="submit"
+          >
             <input type="hidden" name="form-name" value="contact" />
 
             <div class="form-group">
