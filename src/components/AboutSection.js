@@ -18,10 +18,10 @@ function AboutSection() {
           <motion.h1 variants={titleAnim}>Ren Tea</motion.h1>
           <motion.h2 variants={titleAnim}>Freelance Photographer</motion.h2>
           <motion.p variants={titleAnim}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit
-            quisquam rerum beatae cum commodi consequuntur totam, voluptates,
-            possimus, aspernatur laborum sapiente consectetur perferendis quia.
-            Libero minima quasi assumenda non ea.
+            Ren Tea is a Cambodian-Chinese American photographer based in
+            Houston, TX. She enjoys exploring the world and sharing stories
+            through her lens. Her choice of photography are street and candid,
+            but she occasionally shoots portraits and landscrapes.
           </motion.p>
         </motion.div>
       </Text>
